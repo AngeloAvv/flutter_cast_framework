@@ -754,7 +754,7 @@ void CastHostApiSetup(id<FlutterBinaryMessenger> binaryMessenger, NSObject<CastH
         binaryMessenger:binaryMessenger
         codec:CastHostApiGetCodec()];
     if (api) {
-      NSCAssert([api respondsToSelector:@selector(seekToProgress:error:)], @"CastHostApi api (%@) doesn't respond to @selector(seekToProgress:error:)", api);
+      NSCAssert([api respondsToSelector:@selector(seekToPosition:error:)], @"CastHostApi api (%@) doesn't respond to @selector(seekToPosition:error:)", api);
       [channel setMessageHandler:^(id _Nullable message, FlutterReply callback) {
         NSArray *args = message;
         NSNumber *arg_position = GetNullableObjectAtIndex(args, 0);
