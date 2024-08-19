@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../cast.dart';
@@ -25,9 +24,9 @@ class MiniController extends StatelessWidget {
 
     final mediaInfo = status?.mediaInfo;
     final titleText = mediaInfo
-        ?.mediaMetadata?.strings?[describeEnum(MediaMetadataKey.title)];
+        ?.mediaMetadata?.strings?[MediaMetadataKey.title.name];
     final subtitleText = mediaInfo
-        ?.mediaMetadata?.strings?[describeEnum(MediaMetadataKey.subtitle)];
+        ?.mediaMetadata?.strings?[MediaMetadataKey.subtitle.name];
     final title = Text(
       titleText ?? "",
       maxLines: 1,

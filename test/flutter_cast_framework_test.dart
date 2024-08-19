@@ -5,13 +5,13 @@ void main() {
   const MethodChannel channel = MethodChannel('flutter_cast_framework');
 
   setUp(() {
-    channel.setMockMethodCallHandler((MethodCall methodCall) async {
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel, (methodCall) async {
       return '42';
     });
   });
 
   tearDown(() {
-    channel.setMockMethodCallHandler(null);
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel, null);
   });
 
   test('getPlatformVersion', () async {

@@ -51,8 +51,6 @@ class _CastIconState extends State<CastIcon> with TickerProviderStateMixin {
     });
   }
 
-  Widget _getEmpty() => Container();
-
   Widget _getAnimatedButton() => _ConnectingIcon(color: widget.color);
 
   @override

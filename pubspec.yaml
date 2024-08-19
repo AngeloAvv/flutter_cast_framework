@@ -5,8 +5,8 @@ homepage: https://github.com/gianlucaparadise/flutter_cast_framework
 documentation: https://gianlucaparadise.github.io/flutter_cast_framework/api/
 
 environment:
-  sdk: ">=2.17.0 <3.0.0"
-  flutter: ">=1.10.0"
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.0.0"
 
 dependencies:
   flutter:
@@ -16,10 +16,10 @@ dependencies:
   recase: ^4.1.0
 
 dev_dependencies:
-  dartdoc: ^6.2.0
+  dartdoc: ^8.0.13
   flutter_test:
     sdk: flutter
-  pigeon: ^9.0.7
+  pigeon: ^21.2.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

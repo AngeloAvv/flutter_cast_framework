@@ -111,19 +111,16 @@ class _ExpandedControlsPlayerState extends State<ExpandedControlsPlayer> {
       padding: const EdgeInsets.symmetric(horizontal: 36, vertical: 0),
       child: ValueListenableBuilder(
         valueListenable: sessionManager.remoteMediaClient.playerState,
-        builder: (context, value, child) {
-          final playerState = value as PlayerState;
-          return Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              _getIconButton(Icons.closed_caption, _onClosedCaptionClicked),
-              _getIconButton(Icons.skip_previous, _onSkipPrevClicked),
-              _getPlayPauseButton(playerState),
-              _getIconButton(Icons.skip_next, _onSkipNextClicked),
-              _getVolumeButton(this.isMute),
-            ],
-          );
-        },
+        builder: (context, value, child) => Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            _getIconButton(Icons.closed_caption, _onClosedCaptionClicked),
+            _getIconButton(Icons.skip_previous, _onSkipPrevClicked),
+            _getPlayPauseButton(value),
+            _getIconButton(Icons.skip_next, _onSkipNextClicked),
+            _getVolumeButton(this.isMute),
+          ],
+        ),
       ),
     );
   }

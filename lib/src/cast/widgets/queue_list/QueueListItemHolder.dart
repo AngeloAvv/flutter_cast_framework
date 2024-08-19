@@ -21,11 +21,6 @@ class QueueListItemHolder extends StatefulWidget {
     this.emptyItemStateBuilder,
   }) : super(key: key);
 
-  Widget _getEmptyState(BuildContext context) {
-    if (emptyItemStateBuilder == null) return defaultEmptyState();
-    return emptyItemStateBuilder!(context, false, null);
-  }
-
   Widget _getErrorState(BuildContext context, Object? error) {
     if (emptyItemStateBuilder == null) return defaultEmptyState();
     return emptyItemStateBuilder!(context, false, error);
