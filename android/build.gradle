@@ -2,7 +2,7 @@ group 'com.gianlucaparadise.flutter_cast_framework'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '2.0.10'
+    ext.kotlin_version = '2.3.0'
     repositories {
         google()
         mavenCentral()
