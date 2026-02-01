@@ -69,8 +69,6 @@ class _CastIconState extends State<CastIcon> with TickerProviderStateMixin {
         return _getButton("assets/ic_cast_connected_24dp.svg", widget.color);
 
       case CastState.idle:
-      default:
-        debugPrint("State not handled: $_castState");
         return _getButton("assets/ic_cast_24dp.svg", _disabledIconColor);
     }
   }
