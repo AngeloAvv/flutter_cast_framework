@@ -16,7 +16,7 @@ dependencies:
   recase: ^4.1.0
 
 dev_dependencies:
-  dartdoc: ^8.0.13
+  dartdoc: 9.0.2
   flutter_test:
     sdk: flutter
   pigeon: ^21.2.0
