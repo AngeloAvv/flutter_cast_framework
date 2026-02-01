@@ -25,18 +25,11 @@ import io.flutter.plugin.common.BinaryMessenger
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
-import io.flutter.plugin.common.PluginRegistry.Registrar
 
 
 class FlutterCastFrameworkPlugin : FlutterPlugin, MethodCallHandler, ActivityAware, DefaultLifecycleObserver {
     companion object {
         const val TAG = "AndroidCastPlugin"
-
-        @JvmStatic
-        fun registerWith(registrar: Registrar) {
-            val plugin = FlutterCastFrameworkPlugin()
-            plugin.onAttachedToEngine(registrar.context(), registrar.messenger())
-        }
     }
 
     init {
