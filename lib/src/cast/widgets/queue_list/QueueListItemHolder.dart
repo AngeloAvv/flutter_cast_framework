@@ -36,8 +36,6 @@ class QueueListItemHolder extends StatefulWidget {
 }
 
 class _QueueListItemHolderState extends State<QueueListItemHolder> {
-  bool _hasChanged = false;
-
   @override
   Widget build(BuildContext context) {
     final sessionManager = widget.castFramework.castContext.sessionManager;
@@ -57,10 +55,7 @@ class _QueueListItemHolderState extends State<QueueListItemHolder> {
               final isUpdated = i == widget.index;
               if (isUpdated) {
                 sub.cancel();
-                setState(() {
-                  // FIXME: I don't like how the refresh is triggered
-                  _hasChanged = true;
-                });
+                setState(() {});
               }
             });
 
