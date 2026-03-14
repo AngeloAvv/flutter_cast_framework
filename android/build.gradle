@@ -60,5 +60,5 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
 
     // To open TracksChooserDialogFragment
-    implementation "androidx.activity:activity-ktx:1.12.3"
+    implementation "androidx.activity:activity-ktx:1.13.0"
 }
