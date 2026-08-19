@@ -19,7 +19,7 @@ dev_dependencies:
   dartdoc: ^9.0.1
   flutter_test:
     sdk: flutter
-  pigeon: ^26.1.7
+  pigeon: ^27.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
