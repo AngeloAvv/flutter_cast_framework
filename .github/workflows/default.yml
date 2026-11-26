@@ -5,22 +5,22 @@ on:
   push:
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-#  test:
-#    name: Testing
-#    uses: ./.github/workflows/test.yml
+  test:
+    name: Testing
+    uses: ./.github/workflows/test.yml
 
   analyze:
-    name: Testing
+    name: Analyze
     uses: ./.github/workflows/analyze.yml
 
   build:
     name: Build (${{ matrix.platform }})
     needs:
-#      - test
+      - test
       - analyze
     strategy:
       matrix:
@@ -29,3 +29,13 @@ jobs:
     with:
       platform: ${{ matrix.platform }}
       working-directory: example
+
+  ci-ok:
+    name: ci-ok
+    if: ${{ always() }}
+    needs: [test, analyze, build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail unless every required job succeeded
+        if: ${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') || contains(needs.*.result, 'skipped') }}
+        run: exit 1

@@ -4,7 +4,7 @@ version: 0.0.1
 publish_to: 'none'
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: ^3.13.0
 
 dependencies:
   flutter:
@@ -14,6 +14,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.5
   transparent_image: ^2.0.1
+  material_ui: ^1.11.1
 
 dev_dependencies:
   flutter_test:
