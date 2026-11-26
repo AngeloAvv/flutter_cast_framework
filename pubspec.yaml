@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^2.0.4
+  material_ui: ^1.11.1
   meta: ^1.8.0
   recase: ^4.1.0
 
