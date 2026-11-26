@@ -5,8 +5,8 @@ homepage: https://github.com/gianlucaparadise/flutter_cast_framework
 documentation: https://gianlucaparadise.github.io/flutter_cast_framework/api/
 
 environment:
-  sdk: ">=3.0.0 <4.0.0"
-  flutter: ">=3.0.0"
+  sdk: ^3.13.0
+  flutter: ">=3.47.0"
 
 dependencies:
   flutter:
